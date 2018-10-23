@@ -3,15 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "a.js",
-  "dependencies": {},
+  "dependencies": {
+    "the-answer": "^1.0.0"
+  },
   "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-latest": "^6.24.1",
+    "lodash": "^4.17.11",
     "rollup": "^0.66.6",
     "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-json": "^3.1.0",
     "rollup-plugin-node-resolve": "^3.4.0"
   },
   "scripts": {
