@@ -6,8 +6,8 @@ const env = {
 }
 /* eslint-disable no-alert, no-console */
 
-alert('foo')
-console.log('bar')
+alert('foo');
+console.log('bar');
 
 /* eslint-enable no-alert, no-console */
 
