@@ -5,6 +5,7 @@ const env = {
     }
 }
 /* eslint-disable no-alert, no-console */
+console.log('xxx');;
 
 alert('foo');
 console.log('bar');

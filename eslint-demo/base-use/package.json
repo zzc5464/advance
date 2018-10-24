@@ -6,15 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src",
-    "fix": "eslint src --fix"
+    "fix": "eslint src --fix",
   },
+  "pre-commit": [
+    "lint"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "pre-commit": "^1.2.2"
-  },
-  "pre-commit": [
-    "fix"
-  ]
+  }
 }
