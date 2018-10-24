@@ -1,6 +1,9 @@
 <template>
   <div>
     xxxx
+    <a href="">
+      <button>撒哒哒</button>
+    </a>
   </div>
 </template>
 <script>
@@ -20,3 +23,12 @@ export default {
   }
 }
 </script>
+<style>
+a {}
+button {
+  width: 100px;
+  height: 300px;
+  background-color: #ccc;
+}
+</style>
+

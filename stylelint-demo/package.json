@@ -1,0 +1,16 @@
+{
+  "name": "stylelint-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".stylelintrc.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "slint": "stylelint src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint": "^9.6.0"
+  }
+}
