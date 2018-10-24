@@ -135,6 +135,6 @@ console.log('bar');
 }
 
 ```
-
+> 只有在package.json同级的git提交，pre-commit 才会生效。
 
 
