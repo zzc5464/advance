@@ -11,23 +11,21 @@ module.exports = {
     },
     "rules": {
         "indent": [
-            "error",
-            "tab"
+            "warn",
+            2
         ],
         "linebreak-style": [
-            "error",
+            "warn",
             "unix"
         ],
         "quotes": [
-            "error",
+            "warn",
             "single"
         ],
         "semi": [
-            "error",
+            "warn",
             "never"
-        ],
-        "no-console": [
-            "off"
         ]
-    }
+    },
+    "plugins": ['html'] // 必须使用该插件才可以配合 eslint-loader 进行 .vue 文件的检查
 };

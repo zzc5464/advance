@@ -111,7 +111,9 @@ console.log('bar');
 // 以下均不校验
 
 ```
-
+## 项目中使用
+> webpack + vue + eslint
+见项目
 ## 拓展
 
 - pre-commit
