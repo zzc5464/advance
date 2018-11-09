@@ -1,3 +1,7 @@
 <template>
-  <div>app vue sadadda</div>
+  <div>
+    <p> app vue sadadda</p>
+    <router-link to='/list'>list</router-link>
+    <router-view></router-view>
+  </div>
 </template>
