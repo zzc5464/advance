@@ -3,7 +3,9 @@ const path = require('path')
 // const utils = require('./utils')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
-// 插件
+/**
+ * 插件 start
+ */
 // const CopyWebpackPlugin = require('copy-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const baseWebpackConfig = require('./webpack.base.conf')
@@ -12,13 +14,14 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
 // const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
+/**
+ * 插件 end
+ */
 function resolve(src) {
   return path.join(__dirname,'..',src)
 }
 
 const prodWbpackConfig = merge( baseWebpackConfig ,{
-  mode: 'production',
   devtool: '#source-map',
   optimization: {
     minimizer: [ 
@@ -51,7 +54,9 @@ const prodWbpackConfig = merge( baseWebpackConfig ,{
     
   },  
   plugins: [
-    new webpack.DefinePlugin({ "process.env.NODE_ENV": JSON.stringify("production") }),
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": "production"
+    }),
     new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new MiniCssExtractPlugin({

@@ -3,15 +3,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const utils = require('./utils')
 const path = require('path')
 const vueLoaderConfig = require('./vue-loader.conf')
+const config = require('../config')
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
-
+function isDev() {
+  return process.env.NODE_ENV === 'development' ? true : false
+}
 
 module.exports = {
-  entry: './src/main.js',
+  mode: process.env.NODE_ENV,
+  entry: resolve('src/main.js'),
   output: {
-    publicPath: resolve('dist'),
+    publicPath: isDev ? config.dev.publicPath: config.build.publicPath,
     path: resolve('dist'),
     filename: '[name].js'
   },
@@ -65,8 +69,6 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(), // vue-loader v14 以上一定要引入这个插件
-    // new HtmlWebpackPlugin(), // 根据模版生成index文件
-
   ],
   resolve: {
     extensions: ['.js', '.vue', '.json'],
